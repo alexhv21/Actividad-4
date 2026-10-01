@@ -37,7 +37,7 @@ Este es un portafolio personal construido con **HTML5**, **CSS3** y **JavaScript
 
 El portafolio está compuesto por las siguientes secciones:
 
-### Inicio (Hero)
+### Inicio 
 Página principal con presentación personal, foto de fondo y texto animado con Typed.js. Incluye navegación lateral con foto de perfil.
 
 ![Inicio](img/captura_inicio.png)
