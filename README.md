@@ -20,8 +20,8 @@
 | **Hora**          | 10:00 - 11:00                            |
 | **Fecha de entrega** | 30 de septiembre del 2026             |
 
-[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/alexhv21)
-[![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-222222?style=for-the-badge&logo=githubpages&logoColor=white)]()
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/alexhv21/Actividad-4.git)
+[![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-222222?style=for-the-badge&logo=githubpages&logoColor=white)](https://alexhv21.github.io/Actividad-4/)
 
 ---
 
@@ -279,7 +279,7 @@ Aplicación interactiva de escritorio para visualización espacial, transformaci
 1. Clonar el repositorio:
 
    ```bash
-   git clone 
+   git clone https://github.com/alexhv21/Actividad-4.git
    ```
 
 2. Abrir `index.html` en un navegador web.
@@ -290,4 +290,4 @@ Aplicación interactiva de escritorio para visualización espacial, transformaci
 
 ## GitHub Pages
 
-[Ver portafolio en vivo]()
+[Ver portafolio en vivo](https://alexhv21.github.io/Actividad-4/)
