@@ -12,43 +12,45 @@
 --------------------------------------------------------------*/
 /* Fonts */
 :root {
-  --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --heading-font: "Raleway",  sans-serif;
-  --nav-font: "Poppins",  sans-serif;
+  --default-font: "Montserrat", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --heading-font: "Montserrat", sans-serif;
+  --nav-font: "Source Code Pro", monospace;
 }
 
-/* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
+/* Global Colors — Cian/Teal Moderno */
 :root { 
-  --background-color: #ffffff; /* Background color for the entire website, including individual sections */
-  --default-color: #272829; /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #050d18; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #149ddd; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
-  --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
-  --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+  --background-color: #f0f9f8; /* Soft teal-tinted off-white */
+  --default-color: #2c3e50; /* Deep slate for body text */
+  --heading-color: #0a1f2e; /* Rich dark navy-teal for headings */
+  --accent-color: #0ea5a0; /* Vibrant teal — the brand color */
+  --accent-color-light: #14c9c2; /* Lighter teal for hovers/glows */
+  --accent-color-dark: #0b7d79; /* Deeper teal for active states */
+  --surface-color: #ffffff; /* Card/panel backgrounds */
+  --contrast-color: #ffffff; /* Text on accent backgrounds */
 }
 
-/* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
+/* Nav Menu Colors */
 :root {
-  --nav-color: #a8a9b4;  /* The default color of the main navmenu links */
-  --nav-hover-color: #ffffff; /* Applied to main navmenu links when they are hovered over or active */
-  --nav-mobile-background-color: #040b14; /* Used as the background color for mobile navigation menu */
-  --nav-dropdown-background-color: #040b14; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
-  --nav-dropdown-color: #a8a9b4; /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #ffffff; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  --nav-color: #8fa7b4; /* Soft teal-gray for nav links */
+  --nav-hover-color: #e0faf8; /* Very light teal for active */
+  --nav-mobile-background-color: #081b28; /* Deep navy-teal */
+  --nav-dropdown-background-color: #081b28;
+  --nav-dropdown-color: #8fa7b4;
+  --nav-dropdown-hover-color: #e0faf8;
 }
 
-/* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
+/* Color Presets */
 
 .light-background {
-  --background-color: #f4fafd;
+  --background-color: #e8f6f5; /* Light teal wash */
   --surface-color: #ffffff;
 }
 
 .dark-background {
-  --background-color: #040b14;
-  --default-color: #ffffff;
+  --background-color: #0a1f2e; /* Deep dark teal */
+  --default-color: #e0f0ee; /* Light teal-white text */
   --heading-color: #ffffff;
-  --surface-color: #151f2b;
+  --surface-color: #122d3e;
   --contrast-color: #ffffff;
 }
 
@@ -56,6 +58,7 @@
 :root {
   scroll-behavior: smooth;
 }
+
 
 /*--------------------------------------------------------------
 # General Styling & Shared Classes
@@ -1272,4 +1275,87 @@ section,
 --------------------------------------------------------------*/
 .starter-section {
   /* Add your styles here */
+}
+
+/*--------------------------------------------------------------
+# Bootstrap Overrides — Teal Theme
+--------------------------------------------------------------*/
+.btn-primary {
+  --bs-btn-bg: var(--accent-color);
+  --bs-btn-border-color: var(--accent-color);
+  --bs-btn-hover-bg: #0b7d79;
+  --bs-btn-hover-border-color: #0b7d79;
+  --bs-btn-active-bg: #097370;
+  --bs-btn-active-border-color: #097370;
+  --bs-btn-disabled-bg: var(--accent-color);
+  --bs-btn-disabled-border-color: var(--accent-color);
+}
+
+.btn-outline-primary {
+  --bs-btn-color: var(--accent-color);
+  --bs-btn-border-color: var(--accent-color);
+  --bs-btn-hover-bg: var(--accent-color);
+  --bs-btn-hover-border-color: var(--accent-color);
+  --bs-btn-hover-color: #fff;
+  --bs-btn-active-bg: #0b7d79;
+  --bs-btn-active-border-color: #0b7d79;
+  --bs-btn-active-color: #fff;
+}
+
+.form-control:focus {
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 0.25rem rgba(14, 165, 160, 0.25);
+}
+
+/* Subtle letter-spacing for nav links (Source Code Pro) */
+.navmenu a,
+.navmenu a:focus {
+  letter-spacing: 0.5px;
+  font-size: 14px;
+}
+
+/* Heading letter-spacing (Montserrat) */
+h1, h2, h3 {
+  letter-spacing: -0.02em;
+}
+
+/* Section title underline with gradient */
+.section-title h2:after {
+  background: linear-gradient(90deg, var(--accent-color), #14c9c2);
+  height: 3px;
+  border-radius: 2px;
+}
+
+/* Progress bar with gradient */
+.skills .progress-bar {
+  background: linear-gradient(90deg, var(--accent-color), #14c9c2);
+}
+
+/* Resume timeline dot and line with gradient accent */
+.resume .resume-item::before {
+  border: 2px solid var(--accent-color);
+  background: var(--background-color);
+}
+
+/* Info item icon hover glow */
+.contact .info-item:hover i {
+  background: var(--accent-color);
+  color: var(--contrast-color);
+  box-shadow: 0 4px 16px rgba(14, 165, 160, 0.35);
+}
+
+/* Scroll-top glow */
+.scroll-top {
+  background-color: var(--accent-color);
+  box-shadow: 0 4px 12px rgba(14, 165, 160, 0.4);
+}
+
+.scroll-top:hover {
+  background-color: #14c9c2;
+  box-shadow: 0 6px 20px rgba(20, 201, 194, 0.5);
+}
+
+/* Social link hover glow in header */
+.header .social-links a:hover {
+  box-shadow: 0 4px 12px rgba(14, 165, 160, 0.4);
 }
